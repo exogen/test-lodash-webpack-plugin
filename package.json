@@ -1,0 +1,22 @@
+{
+  "name": "test-lodash-webpack-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dist": "npm run dist:no-plugin && npm run dist:plugin",
+    "dist:no-plugin": "webpack --config webpack.no-plugin.js",
+    "dist:plugin": "webpack --config webpack.plugin.js",
+    "test": "npm run test:no-plugin && npm run test:plugin",
+    "test:no-plugin": "npm run dist:no-plugin && node dist/bundle.no-plugin.js && echo OK test:no-plugin",
+    "test:plugin": "npm run dist:plugin && node dist/bundle.plugin.js && echo OK test:plugin"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "lodash-webpack-plugin": "^0.9.1",
+    "webpack": "^1.13.1"
+  }
+}
