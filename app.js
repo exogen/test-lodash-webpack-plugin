@@ -1,5 +1,5 @@
-var assert = require('assert');
-var get = require('lodash/get');
+import get from 'lodash/get';
+import assert from 'assert';
 
 var x = { a: { b: { c: 1 } } };
 
